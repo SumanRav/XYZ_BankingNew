@@ -1,0 +1,36 @@
+a{
+	text-decoration: none;
+	color: white;
+}
+ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8000ff;
+}
+li{
+	float: left;
+	padding: 5px;
+	background-color: #408080;
+}
+li a{
+	display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #800000;
+}
+
+li a:active {
+    background-color: #00cd45;
+}
+#mainframe{
+	background: white;
+}
+iframe {
+	border: none;
+}

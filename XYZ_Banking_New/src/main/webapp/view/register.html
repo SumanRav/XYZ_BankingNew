@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+<link type="text/css" rel="stylesheet" href="../style/style.css"></link>
+<script src="../script/validateCustomer.js"></script>
+</head>
+<body>
+<h1 align="center">Register</h1>
+<hr>
+
+<form action="../Register" method="post" onsubmit="return validateCustomer()" name="registerform">
+	<table class="sidebyside">
+		<tr>
+			<td>First name:<span class="required">*</span></td>
+			<td><input type="text" name="firstname"></td>
+			<td><div id="fnErrMsg" class="error"></div></td>
+		</tr>
+		<tr>
+			<td>Last name:<span class="required">*</span></td>
+			<td><input type="text" name="lastname"></td>
+			<td><div id="lnErrMsg" class="error"></div></td>
+		</tr>
+		<tr>
+			<td>Date of Birth:<span class="required">*</span></td>
+			<td><input type="date" name="dateOfBirth"></td>
+			<td><div id="dobErrMsg" class="error"></div></td>
+		</tr>
+		<tr>
+			<td>Email:<span class="required">*</span></td>
+			<td><input type="email" name="email"></td>
+			<td><div id="emailErrMsg" class="error"></div></td>
+		</tr>
+		<tr>
+			<td>Mobile no.:<span class="required">*</span></td>
+			<td><input type="text" name="mobile"></td>
+			<td><div id="mobileErrMsg" class="error"></div></td>
+		</tr>
+		<tr>
+			<td>Password:<span class="required">*</span></td>
+			<td><input type="password" name="password"></td>
+			<td><div id="pwdErrMsg" class="error"></div></td>
+		</tr>
+		<tr>
+			<td>Confirm Password:<span class="required">*</span></td>
+			<td><input type="password" name="confirmPassword"></td>
+			<td><div id="confirmPwdErrMsg" class="error"></div></td>
+		</tr>
+	</table>
+	<table align="center" class="sidebyside">
+		<tr>
+			<td>Address line 1:<span class="required">*</span></td>
+			<td><textarea rows="2" cols="22" name="addressline1"></textarea></td>
+			<td><div id="addressline1ErrMsg" class="error"></div></td>
+		</tr>
+		<tr>
+			<td>Address line 2:</td>
+			<td><textarea rows="2" cols="22" name="addressline2"></textarea></td>
+			<td><div id="addressline2ErrMsg" class="error"></div></td>
+		</tr>
+		<tr>
+			<td>City:<span class="required">*</span></td>
+			<td><input type="text" name="city"></td>
+			<td><div id="cityErrMsg" class="error"></div></td>
+		</tr>
+		<tr>
+			<td>State:<span class="required">*</span></td>
+			<td><input type="text" name="state"></td>
+			<td><div id="stateErrMsg" class="error"></div></td>
+		</tr>
+		<tr>
+			<td>Pin code:<span class="required">*</span></td>
+			<td><input type="text" name="pincode"></td>
+			<td><div id="pincodeErrMsg" class="error"></div></td>
+		</tr>
+	</table>
+	<br>
+	<input type="submit" name="submit" value="Register" class="button"><br><br>
+	<a href="../index.html" class="button">Cancel</a>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Capg Banking</title>
+<link type="text/css" rel="stylesheet" href="../style/style.css"></link>
+<script src="../script/validateTransactionSummary.js"></script>
+</head>
+<body>
+<!-- <form method="post" action="../TransactionSummary" name="transactionsummaryform" onsubmit="return validateTransactionSummary()"> -->
+<form method="post" action="transactionSummaryTable.jsp" name="transactionsummaryform" onsubmit="return validateTransactionSummary()">
+	<div>
+	<h2>Transaction Summary</h2>
+		<table>
+			<tr>
+				<td>
+					From: <input type="date" name="fromDate">
+				</td>
+				<td>
+					To: <input type="date" name="toDate">
+				</td>
+				<td>
+					<div id="dateErrMsg" class="error"></div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<input type="submit" value="Summary" name="summary" class="button">
+				</td>
+			</tr>
+		
+		</table>
+	
+	</div>
+
+</form>
+</body>
+</html>

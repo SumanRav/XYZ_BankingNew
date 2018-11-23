@@ -1,0 +1,51 @@
+
+create table customer(
+custId int primary key auto_increment,
+firstName varchar(25),
+lastName varchar(25),
+dateOfBirth date,
+email varchar(50),
+mobileNo varchar(25),
+custPwd varchar(25)
+);
+
+create table address(
+addressId int primary key auto_increment,
+customerId int,
+addressLine1 varchar(25),
+addressLine2 varchar(25),
+city varchar(25),
+state varchar(25),
+pincode varchar(10)
+);
+
+create table account(
+accountNumber int primary key auto_increment,
+customerId int,
+accountType varchar(10),
+openingDate date,
+openingBalance int check(openingBalance>=0),
+description varchar(100)
+);
+
+create table transaction(
+transactionId int primary key auto_increment,
+transactionDate date,
+fromAccountNumber int,
+toAccountNumber int,
+amount int check(amount>=0),
+transactionType varchar(20),
+description varchar(100)
+);
+
+alter table address auto_increment=1598190001;
+alter table address add constraint customerId_fk foreign key(customerId) references customer(customerId);
+
+alter table customer auto_increment=1598193301;
+
+alter table account auto_increment=1598191101;
+alter table account add constraint acc_customerId_fk foreign key(customerId) references customer(customerId);
+
+alter table transaction auto_increment=2600001;
+alter table transaction add constraint fromAccountNumber_fk foreign key(fromAccountNumber) references account(accountNumber);
+alter table transaction add constraint toAccountNumber_fk foreign key(toAccountNumber) references account(accountNumber);

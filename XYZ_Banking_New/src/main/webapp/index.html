@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Capg Banking</title>
+<link type="text/css" rel="stylesheet" href="style/style.css"></link>
+<script src="script/validate.js"></script>
+</head>
+<body onload="checkStatus()">
+<h1 align="center">Capg Banking</h1>
+<hr>
+
+<table>
+	<tr>
+		<td width="50%">
+			<img alt="image" src="images/banking.jpg" width="500">
+		</td>
+		
+		
+		
+		<td width="50%">
+			<form action="Login" method="post" onsubmit="return validate()" name="loginform">
+				<table>
+					<tr>
+						<th colspan="2"><h2>Login form</h2></th>
+					</tr>
+					<tr>
+						<th colspan="2"><div id="loginFailMsg" class="error"></div></th>
+					</tr>
+					<tr>
+						<td>Username:</td>
+						<td><input type="text" name="username"></td>
+						<td><div id="userErrMsg" class="error"></div></td>
+					</tr>
+					<tr>
+						<td>Password:</td>
+						<td><input type="password" name="password"></td>
+						<td><div id="passErrMsg" class="error"></div></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><div id="msg" class="error"></div></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><input type="submit" name="submit" value="Login" class="button"></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">New user? <a href="view/register.html">Register Here</a></td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+<table>	
+
+
+</body>
+</html>

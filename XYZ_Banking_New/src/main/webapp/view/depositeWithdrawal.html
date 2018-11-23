@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Capg Banking</title>
+<link type="text/css" rel="stylesheet" href="../style/style.css"></link>
+<script src="/script/validateDepositeWithdrawal.js"></script>
+</head>
+<body>
+<form method="post" name="depositewithdrawalform" onsubmit="return validateDepositeWithdrawal()">
+	<div>
+		<table>
+			<tr>
+				<th colspan="3">Deposit/Withdrawal</th>
+			</tr>
+			<tr>
+				<td>Select Account:</td>
+				<td>
+					<select name="account">
+						<option value="100">101</option>
+						<option value="101">102</option>
+						<option value="102">103</option>
+						<option value="103">104</option>
+						
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Transaction:</td>
+				<td>
+					<input type="radio" name="transactionType" value="deposite"> Deposite
+					<input type="radio" name="transactionType" value="withdrawal"> Withdrawal
+				</td>
+			</tr>
+			<tr>
+				<td>Amount:</td>
+				<td>
+					<input type="text" name="amount" size="20">  
+				</td>
+				<td><div id="amtErrMsg" class="error"></div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Do Transaction" name="doTransaction" >
+				</td>
+			</tr>
+		
+		</table>
+	
+	</div>
+
+</form>
+</body>
+</html>

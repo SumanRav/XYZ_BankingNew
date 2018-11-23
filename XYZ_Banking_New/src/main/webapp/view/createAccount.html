@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Capg Banking</title>
+<link type="text/css" rel="stylesheet" href="../style/style.css"></link>
+<script src="../script/validateAccount.js"></script>
+</head>
+<body>
+<form method="post" action="../AccountCreation" name="accountform" onsubmit="return validateAccount()">
+	<div>
+	<h2>Account Creation</h2>
+		<table>
+			<tr>
+				<td>Account Type:</td>
+				<td>
+					<select name="accountType">
+						<option value="saving">Savings</option>
+						<option value="current">Current</option>
+						<option value="rd">Recurring Deposit</option>
+						<option value="fd">Fixed Deposit</option>
+						
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Opening Balance:</td>
+				<td>
+					<input type="text" name="balance" size="20">  
+				</td>
+				<td><div id="balErrMsg" class="error"></div></td>
+			</tr>
+			<tr>
+				<td>Description:</td>
+				<td>
+					<textarea rows="2" cols="20" name="description"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" value="Create Account" name="createAcc" class="button">
+				</td>
+			</tr>
+		
+		</table>
+	
+	</div>
+
+</form>
+</body>
+</html>

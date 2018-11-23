@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>capgBanking</title>
+<link type="text/css" rel="stylesheet" href="../style/style.css"></link>
+<script src="../script/validateFundTransfer.js"></script>
+</head>
+<body>
+<form method="post" action="../FundTransfer" name="fundtransferform" onsubmit="return validateFundTransfer()">
+	<div>
+		<table>
+			<tr>
+				<th colspan="3">Fund Transfer</th>
+			</tr>
+			<tr>
+				<td>Select your Account:</td>
+				<td>
+					<select name="fromAccount">
+						<option value="100">101</option>
+						<option value="101">102</option>
+						<option value="102">103</option>
+						<option value="103">104</option>
+						
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Select target Account:</td>
+				<td>
+					<select name="toAccount">
+						<option value="100">101</option>
+						<option value="101">102</option>
+						<option value="102">103</option>
+						<option value="103">104</option>
+						
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Amount:</td>
+				<td>
+					<input type="text" name="amount" size="20">  
+				</td>
+				<td><div id="amtErrMsg" class="error"></div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Transfer" name="doTransfer" >
+				</td>
+			</tr>
+		
+		</table>
+	
+	</div>
+
+</form>
+</body>
+</html>
